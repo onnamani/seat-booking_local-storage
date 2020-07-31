@@ -6,9 +6,6 @@ const movieSelect = document.getElementById('movie')
 
 populateUI()
 
-// console.log(seats)
-// console.log([...seats])
-
 let ticketPrice = +movieSelect.value //the plus converts the string to number
 
 // Save selected movie index and price
@@ -22,7 +19,7 @@ function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected')
 
   const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat))
-  // console.log(seatsIndex)
+
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex))
   const selectedSeatsCount = selectedSeats.length
 
